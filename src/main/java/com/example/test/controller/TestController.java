@@ -1,5 +1,6 @@
 package com.example.test.controller;
 
+import com.example.test.model.SearchVO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,8 +12,22 @@ public class TestController {
         return "welcome back";
     }
 
-    @GetMapping("/getParameters")
+  /*  @GetMapping("/getParameters")
     public String getParameters(@RequestParam String id, @RequestParam String email){
         return "아이디는 " + id + "이메일은 " + email;
+    }*/
+    @GetMapping("/getParameters")
+    public String getParameters(@RequestParam(name="id") String userId, @RequestParam(name="email") String userEmail){
+        return "아이디는 " + userId + "이메일은 " + userEmail;
+    }
+    @GetMapping("/getMultiParameters")
+    public String getMultiParameters(SearchVO searchVO){
+        return "VO사용 아이디는 " + searchVO.getId()+"이메일은" + searchVO.getEmail();
+    }
+
+    @GetMapping("/getMultiParametersRtnJson")
+        public SearchVO getMultiParametersRtnJson(SearchVO searchVo){
+        return searchVo;
     }
 }
+
