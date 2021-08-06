@@ -18,7 +18,7 @@ public class TestController {
     }*/
     @GetMapping("/getParameters")
     public String getParameters(@RequestParam(name="id") String userId, @RequestParam(name="email") String userEmail){
-        return "아이디는 " + userId + "이메일은 " + userEmail;
+        return "아이디는 " + userId + "이멜은 " + userEmail;
     }
     @GetMapping("/getMultiParameters")
     public String getMultiParameters(SearchVO searchVO){
