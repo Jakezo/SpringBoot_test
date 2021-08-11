@@ -31,6 +31,12 @@ public class LamdaTest {
         }; // 단일라인 메소드
         my3.hello();
 
+        YourType you = name -> System.out.println(name);
+
+        you.talk("홍길동");
+
+
+
        /* MyType my4 = (String message) -> {
             System.out.println("안녕하세요.");
             System.out.println(message+"입니다.");
