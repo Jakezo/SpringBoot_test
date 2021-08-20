@@ -14,7 +14,7 @@ public class LamdaTest {
         MyInterface my1 = new MyInterface() { //  new 키워드로 객체 직접 대입
             @Override
             public void test() {  // 메소드까지 클래스에 기재하는 것처럼 선언 -> 비용심화
-                System.out.println("t라러리");
+                System.out.println("라러리");
             }
         };
         my1.test(); //메소드사용
