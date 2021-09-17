@@ -19,7 +19,7 @@ public class UserRepositoryTest extends TestApplicationTests {
     @Test
     public void create(){
         User user = new User();
-        user.setName("user3");
+        user.setName("user344");
         user.setEmail("user3@gmail.com");
         user.setPhoneNumber("010-4444-4444");
         user.setRegDt(LocalDateTime.now());
@@ -51,10 +51,10 @@ public class UserRepositoryTest extends TestApplicationTests {
     @Test
     // @Transactional
     public void update(){
-        Optional<User> user = userRepository.findById(1L);
+        Optional<User> user = userRepository.findById(2L);
 
         user.ifPresent(selectUser ->{
-            selectUser.setName("modUser1");
+            selectUser.setName("modUser122");
             selectUser.setEmail("@nave.com");
             selectUser.setRegDt(LocalDateTime.now());
             selectUser.setModUser("cakim21222");
